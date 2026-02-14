@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: sales_source
+    database: DBT_DW
+    schema: source
+    tables:
+      - name: src_customer
+      - name: src_product
+      - name: src_store
+      - name: src_sales
