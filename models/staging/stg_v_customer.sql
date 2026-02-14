@@ -5,7 +5,9 @@ with src_customer as (
 final as (
   select 
     customer_id,
-    initcap(customer_name) customer_name,
+    initcap(customer_name) customer_name_full,
+    initcap({{ first_name('customer_name') }}) customer_name_first,
+    initcap({{ last_name('customer_name') }}) customer_name_last,
     lower(gender) gender,
     initcap(trim(city)) city,
     initcap(trim(state)) state,
