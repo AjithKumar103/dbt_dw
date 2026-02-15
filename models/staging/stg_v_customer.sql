@@ -9,9 +9,9 @@ final as (
     initcap({{ first_name('customer_name') }}) customer_name_first,
     initcap({{ last_name('customer_name') }}) customer_name_last,
     lower(gender) gender,
-    initcap(trim(city)) city,
-    initcap(trim(state)) state,
-    initcap(trim(country)) country,
+    initcap(trim(city)) customer_city,
+    initcap(trim(state)) customer_state,
+    initcap(trim(country)) customer_country,
     last_updated
   from src_customer
 )
