@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: stg_v_customer
+    description: "Customer Details are formatted and engineered as staging view"
+    columns:
+      - name: customer_id
+        data_tests:
+          - not_null
+          - unique
+  - name: stg_v_product
+    description: "Product Details are transoformed as staging view"
+    columns:
+      - name: product_id
+        data_tests:
+          - not_null
+          - unique
+
+  - name: stg_v_store
+    description: "Store Details such as name and location are formatted as staging view"
+    columns:
+      - name: store_id
+        data_tests:
+          - not_null
+          - unique

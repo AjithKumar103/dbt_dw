@@ -1,0 +1,16 @@
+snapshots:
+  - name: sst_customer
+    relation: ref('stg_v_customer')
+    config:
+      schema: snapshots
+      strategy: timestamp
+      unique_key: customer_id
+      updated_at: last_updated
+
+  - name: sst_product
+    relation: ref('stg_v_product')
+    config:
+      schema: snapshots
+      strategy: timestamp
+      unique_key: product_id
+      updated_at: last_updated
