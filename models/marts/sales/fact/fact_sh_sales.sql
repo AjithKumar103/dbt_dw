@@ -35,7 +35,10 @@ final as (
         quantity units,
         sales_amount sales,
         discount, 
-        cost
+        cost,
+
+        --last load
+        current_timestamp as last_load_date_time
 
     from sales s
 
